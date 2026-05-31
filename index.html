@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASN Cleaning Service München | Professional Cleaning & Maintenance</title>
+<meta name="description" content="ASN Cleaning Service München – Professionelle Gebäudereinigung, Fensterreinigung, Dachreinigung, Gartenservice & mehr. 4,8★ auf Google. Jetzt kostenlos anfragen!">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #112240;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --white: #F8F6F1;
+    --gray: #8A9BB0;
+    --light-bg: #F0EDE6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(10,22,40,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex; gap: 40px; list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: opacity 0.3s, color 0.3s;
+  }
+
+  .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 10px 24px;
+    border-radius: 2px;
+    opacity: 1 !important;
+    transition: all 0.3s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 10% 80%, rgba(201,168,76,0.05) 0%, transparent 50%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .hero-badge span { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 36px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 16px 36px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .stat {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hero-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .service-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(248,246,241,0.8);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .service-list li:last-child { border-bottom: none; }
+
+  .service-icon {
+    width: 32px; height: 32px;
+    background: rgba(201,168,76,0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .review-badge {
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 100px;
+    padding: 10px 20px;
+    margin-top: 24px;
+    font-size: 13px;
+  }
+
+  .stars { color: var(--gold); letter-spacing: 2px; }
+
+  /* SERVICES */
+  .services {
+    padding: 120px 60px;
+    background: var(--navy-mid);
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    line-height: 1.2;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 40px 32px;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: rgba(201,168,76,0.04); transform: translateY(-4px); }
+
+  .service-card-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  .service-card p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* WHY US */
+  .why {
+    padding: 120px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .why-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .why-content p {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .why-features {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .feature-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.2);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 50px;
+  }
+
+  .feature h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--white);
+  }
+
+  .feature p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .why-visual {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+    padding: 48px 40px;
+  }
+
+  .why-visual h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .coverage-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .coverage-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 14px;
+  }
+
+  .coverage-list li:last-child { border-bottom: none; }
+
+  .coverage-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 120px 60px;
+    background: var(--navy-mid);
+  }
+
+  .contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 68px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .contact h2 span { color: var(--gold); }
+
+  .contact p {
+    font-size: 16px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 56px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 56px;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 32px 24px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.3s;
+  }
+
+  .contact-card:hover {
+    background: rgba(201,168,76,0.06);
+    border-color: rgba(201,168,76,0.3);
+    transform: translateY(-4px);
+  }
+
+  .contact-card-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+  .contact-card-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
+  .contact-card-value { font-size: 14px; color: var(--gray); }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 60px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 1px;
+  }
+
+  /* LANG TOGGLE */
+  .lang-toggle {
+    display: flex;
+    gap: 4px;
+  }
+
+  .lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--gray);
+    padding: 4px 10px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .lang-btn.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+  }
+
+  /* ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s, transform 0.7s;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { display: none; }
+    .hero-stats { grid-template-columns: repeat(3, 1fr); }
+    .services { padding: 80px 24px; }
+    .why { padding: 80px 24px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact { padding: 80px 24px; }
+    .contact-cards { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">ASN</a>
+  <ul class="nav-links">
+    <li><a href="#services" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+    <li><a href="#why" data-de="Über uns" data-en="About">Über uns</a></li>
+    <li><a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+    <li><a href="https://wa.me/4915754054898" class="nav-cta" data-de="Anfragen" data-en="Get Quote">Anfragen</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">
+        <span></span>
+        <span data-de="München & Umgebung" data-en="Munich & Surroundings">München & Umgebung</span>
+      </div>
+      <h1>
+        <span data-de="Professionelle" data-en="Professional">Professionelle</span>
+        <em data-de="Reinigung &" data-en="Cleaning &">Reinigung &</em>
+        <span data-de="Gebäudepflege" data-en="Facility Services">Gebäudepflege</span>
+      </h1>
+      <p class="hero-sub" data-de="ASN Cleaning Service München – Ihr zuverlässiger Partner für makellose Sauberkeit. Über 20 Bewertungen, 4,8 Sterne auf Google. Privat & Gewerblich." data-en="ASN Cleaning Service Munich – your trusted partner for immaculate cleanliness. Rated 4.8★ on Google with over 20 reviews. Residential & Commercial.">
+        ASN Cleaning Service München – Ihr zuverlässiger Partner für makellose Sauberkeit. Über 20 Bewertungen, 4,8 Sterne auf Google. Privat & Gewerblich.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/4915754054898" class="btn-primary" data-de="Kostenlos anfragen" data-en="Free Quote">Kostenlos anfragen</a>
+        <a href="tel:+4915754054898" class="btn-secondary" data-de="Jetzt anrufen" data-en="Call Now">Jetzt anrufen</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">4.8★</span>
+          <span class="stat-label" data-de="Google Score" data-en="Google Score">Google Score</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label" data-de="Bewertungen" data-en="Reviews">Bewertungen</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">24h</span>
+          <span class="stat-label" data-de="Erreichbar" data-en="Available">Erreichbar</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual fade-in" style="animation-delay: 0.2s">
+      <div class="hero-card">
+        <div class="hero-card-title" data-de="Unsere Leistungen" data-en="Our Services">Unsere Leistungen</div>
+        <ul class="service-list">
+          <li><span class="service-icon">🏢</span><span data-de="Gebäudereinigung" data-en="Building Cleaning">Gebäudereinigung</span></li>
+          <li><span class="service-icon">🪟</span><span data-de="Fensterreinigung" data-en="Window Cleaning">Fensterreinigung</span></li>
+          <li><span class="service-icon">🌿</span><span data-de="Gartenservice" data-en="Garden Service">Gartenservice</span></li>
+          <li><span class="service-icon">💧</span><span data-de="Hochdruckreinigung" data-en="Pressure Washing">Hochdruckreinigung</span></li>
+          <li><span class="service-icon">🏠</span><span data-de="Dachreinigung" data-en="Roof Cleaning">Dachreinigung</span></li>
+          <li><span class="service-icon">✨</span><span data-de="& vieles mehr..." data-en="& much more...">& vieles mehr...</span></li>
+        </ul>
+        <div class="review-badge">
+          <span class="stars">★★★★★</span>
+          <span style="font-size:13px; color: var(--gray)" data-de="4,8 / 5 – Google Bewertung" data-en="4.8 / 5 – Google Rating">4,8 / 5 – Google Bewertung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header fade-in">
+    <span class="section-tag" data-de="Was wir anbieten" data-en="What We Offer">Was wir anbieten</span>
+    <h2 class="section-title" data-de="Kompletter Rundum-Service aus einer Hand" data-en="Complete Full-Service From One Provider">Kompletter Rundum-Service aus einer Hand</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🏢</span>
+      <h3 data-de="Gebäudereinigung" data-en="Building Cleaning">Gebäudereinigung</h3>
+      <p data-de="Professionelle Reinigung von Büros, Treppenhäusern, Wohngebäuden und Gewerbeobjekten." data-en="Professional cleaning of offices, stairwells, residential and commercial buildings.">Professionelle Reinigung von Büros, Treppenhäusern, Wohngebäuden und Gewerbeobjekten.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🪟</span>
+      <h3 data-de="Fensterreinigung" data-en="Window Cleaning">Fensterreinigung</h3>
+      <p data-de="Glasklare Fenster innen und außen – für Privathaushalte und Unternehmen." data-en="Crystal clear windows inside and out – for private households and businesses.">Glasklare Fenster innen und außen – für Privathaushalte und Unternehmen.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🌿</span>
+      <h3 data-de="Gartenservice" data-en="Garden Service">Gartenservice</h3>
+      <p data-de="Rasenmähen, Heckenschneiden, Gartengestaltung und Saisonpflege nach Ihren Wünschen." data-en="Lawn mowing, hedge trimming, garden design and seasonal maintenance.">Rasenmähen, Heckenschneiden, Gartengestaltung und Saisonpflege nach Ihren Wünschen.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">💧</span>
+      <h3 data-de="Hochdruckreinigung" data-en="Pressure Washing">Hochdruckreinigung</h3>
+      <p data-de="Terrassen, Einfahrten, Parkplätze und Fassaden – kraftvoll und gründlich gereinigt." data-en="Terraces, driveways, parking lots and facades – powerfully and thoroughly cleaned.">Terrassen, Einfahrten, Parkplätze und Fassaden – kraftvoll und gründlich gereinigt.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🏠</span>
+      <h3 data-de="Dachreinigung" data-en="Roof Cleaning">Dachreinigung</h3>
+      <p data-de="Moos- und Schmutzentfernung vom Dach – schützt Ihr Eigentum langfristig." data-en="Moss and dirt removal from roofs – protects your property long-term.">Moos- und Schmutzentfernung vom Dach – schützt Ihr Eigentum langfristig.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🧹</span>
+      <h3 data-de="Ein- & Auszugsreinigung" data-en="Move-In/Out Cleaning">Ein- & Auszugsreinigung</h3>
+      <p data-de="Wohnungsübergabe stressfrei meistern – wir sorgen für makellose Sauberkeit." data-en="Master apartment handover stress-free – we ensure immaculate cleanliness.">Wohnungsübergabe stressfrei meistern – wir sorgen für makellose Sauberkeit.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🏗️</span>
+      <h3 data-de="Fassadenreinigung" data-en="Facade Cleaning">Fassadenreinigung</h3>
+      <p data-de="Schonende und effektive Reinigung von Fassaden aller Art – für einen frischen Auftritt." data-en="Gentle and effective cleaning of all types of facades – for a fresh appearance.">Schonende und effektive Reinigung von Fassaden aller Art – für einen frischen Auftritt.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🔧</span>
+      <h3 data-de="Hausmeisterservice" data-en="Facility Management">Hausmeisterservice</h3>
+      <p data-de="Zuverlässige Betreuung Ihrer Immobilie – von Reparaturen bis zur laufenden Pflege." data-en="Reliable management of your property – from repairs to ongoing maintenance.">Zuverlässige Betreuung Ihrer Immobilie – von Reparaturen bis zur laufenden Pflege.</p>
+    </div>
+    <div class="service-card fade-in">
+      <span class="service-card-icon">🚗</span>
+      <h3 data-de="Parkplatzreinigung" data-en="Parking Lot Cleaning">Parkplatzreinigung</h3>
+      <p data-de="Tiefgaragen, Parkplätze und Zufahrten professionell gereinigt – für Betriebe jeder Größe." data-en="Underground garages, parking lots and driveways professionally cleaned – for businesses of all sizes.">Tiefgaragen, Parkplätze und Zufahrten professionell gereinigt – für Betriebe jeder Größe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="why-grid">
+    <div class="why-content fade-in">
+      <span class="section-tag" data-de="Warum ASN" data-en="Why ASN">Warum ASN</span>
+      <h2 data-de="Qualität die man sieht. Vertrauen das bleibt." data-en="Quality you can see. Trust that lasts.">Qualität die man sieht. Vertrauen das bleibt.</h2>
+      <p data-de="Wir sind ein erfahrenes Reinigungsunternehmen aus München mit langjähriger Erfahrung. Unser Team arbeitet mit modernster Ausrüstung und höchsten Standards – für Privatkunden und Unternehmen gleichermaßen." data-en="We are an experienced cleaning company from Munich with years of expertise. Our team works with state-of-the-art equipment and the highest standards – for private clients and businesses alike.">
+        Wir sind ein erfahrenes Reinigungsunternehmen aus München mit langjähriger Erfahrung. Unser Team arbeitet mit modernster Ausrüstung und höchsten Standards – für Privatkunden und Unternehmen gleichermaßen.
+      </p>
+      <div class="why-features">
+        <div class="feature">
+          <span class="feature-num">01</span>
+          <div>
+            <h4 data-de="Faire Festpreise" data-en="Fair Fixed Prices">Faire Festpreise</h4>
+            <p data-de="Keine versteckten Kosten. Wir nennen den Preis vorher – transparent und ehrlich." data-en="No hidden costs. We quote the price upfront – transparent and honest.">Keine versteckten Kosten. Wir nennen den Preis vorher – transparent und ehrlich.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-num">02</span>
+          <div>
+            <h4 data-de="Pünktlich & Zuverlässig" data-en="Punctual & Reliable">Pünktlich & Zuverlässig</h4>
+            <p data-de="Wir erscheinen zum vereinbarten Termin und erledigen die Arbeit gründlich." data-en="We show up at the agreed time and do the job thoroughly.">Wir erscheinen zum vereinbarten Termin und erledigen die Arbeit gründlich.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-num">03</span>
+          <div>
+            <h4 data-de="24h Erreichbar" data-en="24h Available">24h Erreichbar</h4>
+            <p data-de="Wir sind rund um die Uhr für Anfragen erreichbar – schnelle Reaktionszeit garantiert." data-en="We are available around the clock for inquiries – fast response time guaranteed.">Wir sind rund um die Uhr für Anfragen erreichbar – schnelle Reaktionszeit garantiert.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual fade-in">
+      <h3 data-de="Servicegebiet" data-en="Service Area">Servicegebiet</h3>
+      <ul class="coverage-list">
+        <li><span data-de="München Innenstadt" data-en="Munich City Center">München Innenstadt</span><span class="coverage-dot"></span></li>
+        <li><span data-de="Schwabing & Maxvorstadt" data-en="Schwabing & Maxvorstadt">Schwabing & Maxvorstadt</span><span class="coverage-dot"></span></li>
+        <li><span data-de="Bogenhausen & Haidhausen" data-en="Bogenhausen & Haidhausen">Bogenhausen & Haidhausen</span><span class="coverage-dot"></span></li>
+        <li><span data-de="Solln & Grünwald" data-en="Solln & Grünwald">Solln & Grünwald</span><span class="coverage-dot"></span></li>
+        <li><span data-de="Nymphenburg & Pasing" data-en="Nymphenburg & Pasing">Nymphenburg & Pasing</span><span class="coverage-dot"></span></li>
+        <li><span data-de="München Umgebung" data-en="Munich Surroundings">München Umgebung</span><span class="coverage-dot"></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner fade-in">
+    <span class="section-tag" data-de="Kontakt" data-en="Contact">Kontakt</span>
+    <h2>
+      <span data-de="Kostenlos" data-en="Get Your">Kostenlos</span>
+      <span class="gold" style="color:var(--gold)" data-de=" anfragen" data-en=" Free Quote"> anfragen</span>
+    </h2>
+    <p data-de="Kontaktieren Sie uns jetzt für Ihren kostenlosen Kostenvoranschlag. Wir melden uns innerhalb weniger Minuten zurück." data-en="Contact us now for your free quote. We'll get back to you within minutes.">
+      Kontaktieren Sie uns jetzt für Ihren kostenlosen Kostenvoranschlag. Wir melden uns innerhalb weniger Minuten zurück.
+    </p>
+    <div class="contact-cards">
+      <a href="https://wa.me/4915754054898" class="contact-card">
+        <span class="contact-card-icon">💬</span>
+        <span class="contact-card-label">WhatsApp</span>
+        <span class="contact-card-value">01575 4054898</span>
+      </a>
+      <a href="tel:+4917739868916" class="contact-card">
+        <span class="contact-card-icon">📞</span>
+        <span class="contact-card-label" data-de="Telefon" data-en="Phone">Telefon</span>
+        <span class="contact-card-value">01773 986891</span>
+      </a>
+      <a href="mailto:asngebaudereinigung@gmail.com" class="contact-card">
+        <span class="contact-card-icon">✉️</span>
+        <span class="contact-card-label">Email</span>
+        <span class="contact-card-value">asngebaudereinigung@gmail.com</span>
+      </a>
+    </div>
+    <a href="https://wa.me/4915754054898" class="btn-primary" data-de="Jetzt WhatsApp schreiben" data-en="Message on WhatsApp">Jetzt WhatsApp schreiben</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">ASN CLEANING SERVICE</span>
+  <span class="footer-text">© 2025 ASN Gebäudereinigung München</span>
+  <span class="footer-text">München, Deutschland</span>
+</footer>
+
+<script>
+  // Language toggle
+  function setLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+    document.querySelectorAll('[data-de]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Trigger hero fade-in
+  setTimeout(() => {
+    document.querySelectorAll('.hero .fade-in').forEach(el => el.classList.add('visible'));
+  }, 100);
+</script>
+</body>
+</html>
